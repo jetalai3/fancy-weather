@@ -15136,7 +15136,7 @@ function (_UpdateListener) {
           currentGeoData = _this$props.currentGeoData,
           currentLang = _this$props.currentLang;
 
-      if (!prevCurrentGeoData || currentGeoData.cityName !== prevCurrentGeoData.cityName || currentLang.localeName !== prevCurrentLang.localeName) {
+      if (!prevCurrentGeoData || currentGeoData.cityName !== prevCurrentGeoData.cityName || currentLang['locale.name'] !== prevCurrentLang['locale.name']) {
         this.updateState(Object(_state_geodata__WEBPACK_IMPORTED_MODULE_1__["setGeoDataLoadingState"])(true));
         this.loadGeoData(currentGeoData.cityName, currentLang['locale.name']).then(function (geoDataObject) {
           return _this2.updateState(Object(_state_geodata__WEBPACK_IMPORTED_MODULE_1__["setGeoDataObject"])(geoDataObject));
@@ -15883,16 +15883,16 @@ function (_UpdateListener) {
     value: function onStateUpdate(_ref2) {
       var _this2 = this;
 
-      var prevCurrentGeoData, prevCurrentTempScale, _this$props, currentLang, currentGeoData, currentTempScale;
+      var prevCurrentGeoData, prevCurrentTempScale, prevCurrentLang, _this$props, currentLang, currentGeoData, currentTempScale;
 
       return regeneratorRuntime.async(function onStateUpdate$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              prevCurrentGeoData = _ref2.currentGeoData, prevCurrentTempScale = _ref2.currentTempScale;
+              prevCurrentGeoData = _ref2.currentGeoData, prevCurrentTempScale = _ref2.currentTempScale, prevCurrentLang = _ref2.currentLang;
               _this$props = this.props, currentLang = _this$props.currentLang, currentGeoData = _this$props.currentGeoData, currentTempScale = _this$props.currentTempScale;
 
-              if ((!prevCurrentGeoData || currentGeoData.cityName !== prevCurrentGeoData.cityName || currentTempScale.code !== prevCurrentTempScale.code) && currentGeoData.lat !== '' && currentGeoData.lng !== '') {
+              if ((!prevCurrentGeoData || currentGeoData.cityName !== prevCurrentGeoData.cityName || currentTempScale.code !== prevCurrentTempScale.code || currentLang['locale.name'] !== prevCurrentLang['locale.name']) && currentGeoData.lat !== '' && currentGeoData.lng !== '') {
                 this.updateState(Object(_state_weather__WEBPACK_IMPORTED_MODULE_1__["setWeatherLoadingState"])(true));
                 this.loadWeather(currentGeoData, currentLang['locale.name'], currentTempScale).then(function (responseData) {
                   return _this2.updateState(Object(_state_weather__WEBPACK_IMPORTED_MODULE_1__["setWeatherObject"])(responseData));
