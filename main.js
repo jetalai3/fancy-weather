@@ -11157,7 +11157,7 @@ exports.push([module.i, "/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0-m
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n  line-height: 1;\n}\n\nbutton {\n    background-color: transparent;\n    border: none;\n}\n\n:root {\n    --border-color: #ffffff;\n    --shadow-color: rgba(0, 0, 0, 0.3);\n    --hover-color: rgba(0, 0, 0, 0.7);\n    --active-color: rgba(0, 0, 0, 0.5);\n\n    --toolbox-offset: 50px;\n    \n    --border: 1px solid var(--border-color);\n}\n\nhtml, body, main {\n    height: 100%;\n}\n\nmain {\n  font-family: 'Montserrat', sans-serif;\n  padding: 20px;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n", ""]);
+exports.push([module.i, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n  line-height: 1;\n}\n\nbutton {\n    background-color: transparent;\n    border: none;\n}\n\n:root {\n    --border-color: #ffffff;\n    --shadow-color: rgba(0, 0, 0, 0.3);\n    --hover-color: rgba(0, 0, 0, 0.7);\n    --active-color: rgba(0, 0, 0, 0.5);\n\n    --toolbox-offset: 50px;\n    \n    --border: 1px solid var(--border-color);\n}\n\nhtml, body, main {\n    height: 100%;\n}\n\nmain {\n  font-family: 'Montserrat', sans-serif;\n  padding: 20px;\n  width: 100%;\n  background-repeat: no-repeat;\n  background-attachment: fixed;\n  background-position: center center;\n  background-size: cover;\n  height: fit-content;\n}\n", ""]);
 
 
 /***/ }),
@@ -11171,21 +11171,21 @@ exports.push([module.i, "* {\n    box-sizing: border-box;\n    margin: 0;\n    p
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".button {\n  display: inline-flex;\n  padding: 5px;\n  border: 0.5px solid #ffffff;\n  border-radius: 3px;\n  color: #ffffff;\n  background-color: var(--active-color);\n  border-radius: 3px;\n  cursor: pointer;\n}\n\n.button:hover {\n  background-color: var(--hover-color);\n}\n", ""]);
+exports.push([module.i, ".button {\n  display: inline-flex;\n  padding: 5px;\n  border: 0.5px solid #ffffff;\n  border-radius: 3px;\n  color: #ffffff;\n  background-color: var(--active-color);\n  border-radius: 3px;\n  cursor: pointer;\n}\n\n.button:hover {\n  background-color: var(--hover-color);\n}\n\n.list__item button {\n  border: none;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n  position: relative;\n}\n\n.list__item button,\n.list__item button:hover {\n  background-color: transparent;\n}", ""]);
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/common/components/input-form/inputForm.css":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/common/components/input-form/inputForm.css ***!
-  \**********************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/common/components/input-form/input-form.css":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/common/components/input-form/input-form.css ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".form {\r\n  width: fit-content;\r\n  padding: 10px;\r\n  background: rgba(0, 0, 0, 0.3);\r\n  border-radius: 3px;\r\n}\r\n\r\n.text-input {\r\n  padding: 3px;\r\n  background: rgba(0, 0, 0, 0.3);\r\n  border: none;\r\n  border-bottom: 1px solid #ffffff;\r\n  color: #ffffff;\r\n}\r\n\r\n.button-input {\r\n  padding: 3px;\r\n  border-radius: 3px;\r\n  font-size: 0.7rem;\r\n  font-weight: bold;\r\n  background: darken(#ffffff, 3);\r\n  color:  #000000;;\r\n  border: none;\r\n  text-transform: uppercase;\r\n}", ""]);
 
 
 /***/ }),
@@ -11199,21 +11199,7 @@ exports.push([module.i, "", ""]);
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".list {\n  list-style-type: none;\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.list__item {\n  height: 30px;\n  padding: 5px 10px;\n  border-radius: 5px;\n  background-color: var(--shadow-color);\n  border: var(--border);\n  cursor: pointer;\n}\n\n.list__item button {\n  border: none;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n  position: relative;\n}\n\n.list__item button,\n.list__item button:hover {\n  background-color: transparent;\n}\n\n.list__item--active {\n  background-color: var(--active-color);\n}\n\n.list__item:hover {\n  background-color: var(--hover-color);\n}\n", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/workspace/components/background-refresh-button/background-refresh-button.css":
-/*!********************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/workspace/components/background-refresh-button/background-refresh-button.css ***!
-  \********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".list {\n  list-style-type: none;\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.list__item {\n  height: 30px;\n  padding: 5px 10px;\n  border-radius: 5px;\n  background-color: var(--shadow-color);\n  border: var(--border);\n  cursor: pointer;\n}\n\n.list__item--active {\n  background-color: var(--active-color);\n}\n\n.list__item:hover {\n  background-color: var(--hover-color);\n}\n", ""]);
 
 
 /***/ }),
@@ -11256,48 +11242,6 @@ exports.push([module.i, ".languages {\n  bottom: 50px;\n  left: 50px;\n}", ""]);
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
 exports.push([module.i, "#map {\r\n  width: 200px;\r\n  height: 200px;\r\n  border-radius: 5px;\r\n}\r\n\r\n.map {\r\n  padding-top: 20px;\r\n}\r\n\r\n.map__latitude,\r\n.map__longitude {\r\n  color: #ffffff;\r\n  background-color: var(--shadow-color);\r\n  width: fit-content;\r\n  margin-top: 10px;\r\n}", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/workspace/components/search-bar/search-bar.css":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/workspace/components/search-bar/search-bar.css ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, ".form {\n  width: fit-content;\n  padding: 10px;\n  background: rgba(0, 0, 0, 0.3);\n  border-radius: 3px;\n}\n\n.text-input {\n  padding: 3px;\n  background: rgba(0, 0, 0, 0.3);\n  border: none;\n  border-bottom: 1px solid #ffffff;\n  color: #ffffff;\n}\n\n.button-input {\n  padding: 3px;\n  border-radius: 3px;\n  font-size: 0.7rem;\n  font-weight: bold;\n  background: darken(#ffffff, 3);\n  color:  #000000;;\n  border: none;\n  text-transform: uppercase;\n}", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/workspace/components/speech-recognition-button/speech-recognition-button.css":
-/*!********************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/workspace/components/speech-recognition-button/speech-recognition-button.css ***!
-  \********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "", ""]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/workspace/components/temp-scales/temp-scales.css":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/workspace/components/temp-scales/temp-scales.css ***!
-  \****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
-// Module
-exports.push([module.i, "", ""]);
 
 
 /***/ }),
@@ -12745,14 +12689,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/common/components/input-form/inputForm.css":
-/*!********************************************************!*\
-  !*** ./src/common/components/input-form/inputForm.css ***!
-  \********************************************************/
+/***/ "./src/common/components/input-form/input-form.css":
+/*!*********************************************************!*\
+  !*** ./src/common/components/input-form/input-form.css ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./inputForm.css */ "./node_modules/css-loader/dist/cjs.js!./src/common/components/input-form/inputForm.css");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./input-form.css */ "./node_modules/css-loader/dist/cjs.js!./src/common/components/input-form/input-form.css");
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -12783,8 +12727,8 @@ if (content.locals) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return renderInputForm; });
 /* harmony import */ var _utils_dom_createDomElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../utils/dom/createDomElement */ "./src/utils/dom/createDomElement.js");
-/* harmony import */ var _inputForm_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./inputForm.css */ "./src/common/components/input-form/inputForm.css");
-/* harmony import */ var _inputForm_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inputForm_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _input_form_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input-form.css */ "./src/common/components/input-form/input-form.css");
+/* harmony import */ var _input_form_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_input_form_css__WEBPACK_IMPORTED_MODULE_1__);
 
 
 function renderInputForm(_ref) {
@@ -13241,7 +13185,6 @@ window.addEventListener('load', function () {
   }
 
   appStateObservable.notify(config);
-  window.appStateObservable = appStateObservable;
 });
 
 /***/ }),
@@ -13469,6 +13412,26 @@ function shallowEqual(left, right) {
 
 /***/ }),
 
+/***/ "./src/workspace/api-keys.js":
+/*!***********************************!*\
+  !*** ./src/workspace/api-keys.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var API_KEYS = {
+  darkSky: '96e5e8ae067b19d2224fbc31e1ad0ba6',
+  openCage: '86cce384ed6d4ce5aced179edbac285c',
+  mapbox: 'pk.eyJ1IjoiamV0YWxhaSIsImEiOiJjazQ2M3h6Z2MwY3FkM2dydnRzdjc3cTYzIn0.In0zvzToHcrRJ-b3aoCxSw',
+  ipInfoToken: 'e2e4b4e2801150',
+  unsplash: '609397bc40c62b170bf5c7f93189c2d2520a5b2b2b13dbb9a54522f2e2cff863'
+};
+/* harmony default export */ __webpack_exports__["default"] = (API_KEYS);
+
+/***/ }),
+
 /***/ "./src/workspace/background-loader/BackgroundLoader.js":
 /*!*************************************************************!*\
   !*** ./src/workspace/background-loader/BackgroundLoader.js ***!
@@ -13526,8 +13489,7 @@ function (_UpdateListener) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(BackgroundLoader).call(this, restProps));
     _this.loadBackground = loadBackground;
     return _this;
-  } // eslint-disable-next-line class-methods-use-this
-
+  }
 
   _createClass(BackgroundLoader, [{
     key: "extractPropsFromState",
@@ -13608,9 +13570,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _state_geodata__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../state/geodata */ "./src/workspace/state/geodata.js");
 /* harmony import */ var _state_background__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../state/background */ "./src/workspace/state/background.js");
 /* harmony import */ var _utils_fetchBackgroundImage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/fetchBackgroundImage */ "./src/workspace/utils/fetchBackgroundImage.js");
-/* harmony import */ var _background_refresh_button_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./background-refresh-button.css */ "./src/workspace/components/background-refresh-button/background-refresh-button.css");
-/* harmony import */ var _background_refresh_button_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_background_refresh_button_css__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _state_weather__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../state/weather */ "./src/workspace/state/weather.js");
+/* harmony import */ var _state_weather__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../state/weather */ "./src/workspace/state/weather.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -13639,7 +13599,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
 var BackgroundRefreshButton =
 /*#__PURE__*/
 function (_Element) {
@@ -13655,8 +13614,7 @@ function (_Element) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(BackgroundRefreshButton).call(this, restProps));
     _this.onBackgroundRefreshButtonClick = _this.onBackgroundRefreshButtonClick.bind(_assertThisInitialized(_this));
     return _this;
-  } // eslint-disable-next-line class-methods-use-this
-
+  }
 
   _createClass(BackgroundRefreshButton, [{
     key: "extractPropsFromState",
@@ -13664,7 +13622,7 @@ function (_Element) {
       return {
         activeDictionary: Object(_state_languages__WEBPACK_IMPORTED_MODULE_2__["getActiveDictionary"])(state),
         currentGeoDataObject: Object(_state_geodata__WEBPACK_IMPORTED_MODULE_3__["getGeoDataObject"])(state),
-        currentWeather: Object(_state_weather__WEBPACK_IMPORTED_MODULE_7__["getWeatherObject"])(state)
+        currentWeather: Object(_state_weather__WEBPACK_IMPORTED_MODULE_6__["getWeatherObject"])(state)
       };
     }
   }, {
@@ -13696,33 +13654,6 @@ function (_Element) {
   return BackgroundRefreshButton;
 }(_common_models_element__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
-
-
-/***/ }),
-
-/***/ "./src/workspace/components/background-refresh-button/background-refresh-button.css":
-/*!******************************************************************************************!*\
-  !*** ./src/workspace/components/background-refresh-button/background-refresh-button.css ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./background-refresh-button.css */ "./node_modules/css-loader/dist/cjs.js!./src/workspace/components/background-refresh-button/background-refresh-button.css");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
 
 
 /***/ }),
@@ -13773,9 +13704,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -13804,12 +13735,8 @@ function (_Element) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(DateTime).call(this, restProps));
     _this.intervalId = null;
     _this.curTime = null;
-    _this.renderDateTimeElement = _this.renderDateTimeElement.bind(_assertThisInitialized(_this));
-    _this.renderDateTimeContent = _this.renderDateTimeContent.bind(_assertThisInitialized(_this));
-    _this.onStateUpdate = _this.onStateUpdate.bind(_assertThisInitialized(_this));
     return _this;
-  } // eslint-disable-next-line class-methods-use-this
-
+  }
 
   _createClass(DateTime, [{
     key: "extractPropsFromState",
@@ -13821,8 +13748,8 @@ function (_Element) {
       };
     }
   }, {
-    key: "renderDateTimeContent",
-    value: function renderDateTimeContent() {
+    key: "render",
+    value: function render() {
       var _this$props = this.props,
           isLoading = _this$props.isLoading,
           dictionary = _this$props.dictionary,
@@ -13842,12 +13769,6 @@ function (_Element) {
       var noDataElement = Object(_utils_dom_createDomElement__WEBPACK_IMPORTED_MODULE_0__["default"])('span');
       noDataElement.innerText = dictionary['weather.noData'];
       return noDataElement;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var dateTimeElement = this.renderDateTimeContent();
-      return dateTimeElement;
     }
   }, {
     key: "onStateUpdate",
@@ -14017,8 +13938,7 @@ function (_Element) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Languages).call(this, restProps));
     _this.onLanguageItemClick = _this.onLanguageItemClick.bind(_assertThisInitialized(_this));
     return _this;
-  } // eslint-disable-next-line class-methods-use-this
-
+  }
 
   _createClass(Languages, [{
     key: "extractPropsFromState",
@@ -14157,9 +14077,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_models_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../common/models/element */ "./src/common/models/element/index.js");
 /* harmony import */ var _state_geodata__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../state/geodata */ "./src/workspace/state/geodata.js");
 /* harmony import */ var _state_languages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../state/languages */ "./src/workspace/state/languages.js");
-/* harmony import */ var _map_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./map.css */ "./src/workspace/components/map/map.css");
-/* harmony import */ var _map_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_map_css__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _utils_getCoordsString__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/getCoordsString */ "./src/workspace/utils/getCoordsString.js");
+/* harmony import */ var _api_keys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../api-keys */ "./src/workspace/api-keys.js");
+/* harmony import */ var _map_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./map.css */ "./src/workspace/components/map/map.css");
+/* harmony import */ var _map_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_map_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _utils_getCoordsString__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/getCoordsString */ "./src/workspace/utils/getCoordsString.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -14172,9 +14093,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -14183,6 +14104,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 /* eslint-disable no-undef */
 
 /* eslint-disable no-unused-vars */
+
 
 
 
@@ -14204,11 +14126,8 @@ function (_Element) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Map).call(this, restProps));
     _this.mapContainer = null;
-    _this.renderMapContent = _this.renderMapContent.bind(_assertThisInitialized(_this));
-    _this.onStateUpdate = _this.onStateUpdate.bind(_assertThisInitialized(_this));
     return _this;
-  } // eslint-disable-next-line class-methods-use-this
-
+  }
 
   _createClass(Map, [{
     key: "extractPropsFromState",
@@ -14220,8 +14139,24 @@ function (_Element) {
       };
     }
   }, {
-    key: "renderMapContent",
-    value: function renderMapContent() {
+    key: "onStateUpdate",
+    value: function onStateUpdate() {
+      var mapContainer = document.querySelector('#map');
+      if (!mapContainer) return;
+      var geoDataObject = this.props.geoDataObject;
+      var mapbox = _api_keys__WEBPACK_IMPORTED_MODULE_4__["default"].mapbox; // eslint-disable-next-line no-undef
+
+      mapboxgl.accessToken = mapbox;
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [geoDataObject.lng, geoDataObject.lat],
+        zoom: 9
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
       var _this$props = this.props,
           isLoading = _this$props.isLoading,
           geoDataObject = _this$props.geoDataObject,
@@ -14237,8 +14172,8 @@ function (_Element) {
         var mapElement = Object(_utils_dom_createDomElement__WEBPACK_IMPORTED_MODULE_0__["default"])('div', ['map']);
         var longitude = Object(_utils_dom_createDomElement__WEBPACK_IMPORTED_MODULE_0__["default"])('div', ['map__longitude']);
         var latitude = Object(_utils_dom_createDomElement__WEBPACK_IMPORTED_MODULE_0__["default"])('div', ['map__latitude']);
-        var lng = Object(_utils_getCoordsString__WEBPACK_IMPORTED_MODULE_5__["default"])(geoDataObject.lng);
-        var lat = Object(_utils_getCoordsString__WEBPACK_IMPORTED_MODULE_5__["default"])(geoDataObject.lat);
+        var lng = Object(_utils_getCoordsString__WEBPACK_IMPORTED_MODULE_6__["default"])(geoDataObject.lng);
+        var lat = Object(_utils_getCoordsString__WEBPACK_IMPORTED_MODULE_6__["default"])(geoDataObject.lat);
         longitude.innerText = "".concat(dictionary.longitude, ": ").concat(lng);
         latitude.innerText = "".concat(dictionary.latitude, ": ").concat(lat);
         this.mapContainer = Object(_utils_dom_createDomElement__WEBPACK_IMPORTED_MODULE_0__["default"])('div');
@@ -14252,30 +14187,6 @@ function (_Element) {
       var noDataElement = Object(_utils_dom_createDomElement__WEBPACK_IMPORTED_MODULE_0__["default"])('span');
       noDataElement.innerText = dictionary['map.noData'];
       return noDataElement;
-    } // eslint-disable-next-line class-methods-use-this
-
-  }, {
-    key: "onStateUpdate",
-    value: function onStateUpdate() {
-      var mapContainer = document.querySelector('#map');
-      if (!mapContainer) return;
-      var geoDataObject = this.props.geoDataObject; // eslint-disable-next-line no-undef
-
-      mapboxgl.accessToken = 'pk.eyJ1IjoiamV0YWxhaSIsImEiOiJjazQ2M3h6Z2MwY3FkM2dydnRzdjc3cTYzIn0.In0zvzToHcrRJ-b3aoCxSw';
-      var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [geoDataObject.lng, geoDataObject.lat],
-        zoom: 9
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var mapContainer = this.renderMapContent(); // createDomElement('div', ['map__container']);
-      // mapContainer.appendChild(this.renderMapContent());
-
-      return mapContainer;
     }
   }]);
 
@@ -14343,8 +14254,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_models_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../common/models/element */ "./src/common/models/element/index.js");
 /* harmony import */ var _state_languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../state/languages */ "./src/workspace/state/languages.js");
 /* harmony import */ var _state_geodata__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../state/geodata */ "./src/workspace/state/geodata.js");
-/* harmony import */ var _search_bar_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./search-bar.css */ "./src/workspace/components/search-bar/search-bar.css");
-/* harmony import */ var _search_bar_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_search_bar_css__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -14376,7 +14285,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
 var SearchBar =
 /*#__PURE__*/
 function (_Element) {
@@ -14392,8 +14300,7 @@ function (_Element) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SearchBar).call(this, restProps));
     _this.onSearchBarSubmit = _this.onSearchBarSubmit.bind(_assertThisInitialized(_this));
     return _this;
-  } // eslint-disable-next-line class-methods-use-this
-
+  }
 
   _createClass(SearchBar, [{
     key: "extractPropsFromState",
@@ -14455,33 +14362,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/workspace/components/search-bar/search-bar.css":
-/*!************************************************************!*\
-  !*** ./src/workspace/components/search-bar/search-bar.css ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./search-bar.css */ "./node_modules/css-loader/dist/cjs.js!./src/workspace/components/search-bar/search-bar.css");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-
 /***/ "./src/workspace/components/speech-recognition-button/SpeechRecognitionButton.js":
 /*!***************************************************************************************!*\
   !*** ./src/workspace/components/speech-recognition-button/SpeechRecognitionButton.js ***!
@@ -14496,8 +14376,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_models_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../common/models/element */ "./src/common/models/element/index.js");
 /* harmony import */ var _state_languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../state/languages */ "./src/workspace/state/languages.js");
 /* harmony import */ var _state_geodata__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../state/geodata */ "./src/workspace/state/geodata.js");
-/* harmony import */ var _speech_recognition_button_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./speech-recognition-button.css */ "./src/workspace/components/speech-recognition-button/speech-recognition-button.css");
-/* harmony import */ var _speech_recognition_button_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_speech_recognition_button_css__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -14532,7 +14410,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
 var SpeechRecognitionButton =
 /*#__PURE__*/
 function (_Element) {
@@ -14550,8 +14427,7 @@ function (_Element) {
     _this.speechRecognitionList = new webkitSpeechGrammarList();
     _this.handleRecognition = _this.handleRecognition.bind(_assertThisInitialized(_this));
     return _this;
-  } // eslint-disable-next-line class-methods-use-this
-
+  }
 
   _createClass(SpeechRecognitionButton, [{
     key: "extractPropsFromState",
@@ -14612,33 +14488,6 @@ function (_Element) {
 
 /***/ }),
 
-/***/ "./src/workspace/components/speech-recognition-button/speech-recognition-button.css":
-/*!******************************************************************************************!*\
-  !*** ./src/workspace/components/speech-recognition-button/speech-recognition-button.css ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./speech-recognition-button.css */ "./node_modules/css-loader/dist/cjs.js!./src/workspace/components/speech-recognition-button/speech-recognition-button.css");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-
 /***/ "./src/workspace/components/temp-scales/TempScales.js":
 /*!************************************************************!*\
   !*** ./src/workspace/components/temp-scales/TempScales.js ***!
@@ -14648,15 +14497,13 @@ if (content.locals) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TempScales; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TemperatureScales; });
 /* harmony import */ var _common_components_list__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../common/components/list */ "./src/common/components/list/index.js");
 /* harmony import */ var _common_components_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../common/components/button */ "./src/common/components/button/index.js");
 /* harmony import */ var _common_models_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../common/models/element */ "./src/common/models/element/index.js");
 /* harmony import */ var _utils_dom_lookupDataAttribute__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../utils/dom/lookupDataAttribute */ "./src/utils/dom/lookupDataAttribute.js");
 /* harmony import */ var _state_tempScales__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../state/tempScales */ "./src/workspace/state/tempScales.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants */ "./src/workspace/components/temp-scales/constants.js");
-/* harmony import */ var _temp_scales_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./temp-scales.css */ "./src/workspace/components/temp-scales/temp-scales.css");
-/* harmony import */ var _temp_scales_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_temp_scales_css__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -14694,26 +14541,24 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-var TempScales =
+var TemperatureScales =
 /*#__PURE__*/
 function (_Element) {
-  _inherits(TempScales, _Element);
+  _inherits(TemperatureScales, _Element);
 
-  function TempScales(_ref) {
+  function TemperatureScales(_ref) {
     var _this;
 
     var restProps = _extends({}, _ref);
 
-    _classCallCheck(this, TempScales);
+    _classCallCheck(this, TemperatureScales);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(TempScales).call(this, restProps));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(TemperatureScales).call(this, restProps));
     _this.onScaleItemClick = _this.onScaleItemClick.bind(_assertThisInitialized(_this));
     return _this;
-  } // eslint-disable-next-line class-methods-use-this
+  }
 
-
-  _createClass(TempScales, [{
+  _createClass(TemperatureScales, [{
     key: "extractPropsFromState",
     value: function extractPropsFromState(state) {
       return {
@@ -14770,7 +14615,7 @@ function (_Element) {
     }
   }]);
 
-  return TempScales;
+  return TemperatureScales;
 }(_common_models_element__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 
@@ -14808,33 +14653,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/workspace/components/temp-scales/temp-scales.css":
-/*!**************************************************************!*\
-  !*** ./src/workspace/components/temp-scales/temp-scales.css ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!./temp-scales.css */ "./node_modules/css-loader/dist/cjs.js!./src/workspace/components/temp-scales/temp-scales.css");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-
 /***/ "./src/workspace/components/weather/Weather.js":
 /*!*****************************************************!*\
   !*** ./src/workspace/components/weather/Weather.js ***!
@@ -14856,8 +14674,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _weather_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_weather_css__WEBPACK_IMPORTED_MODULE_7__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -14866,9 +14682,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -14890,22 +14706,18 @@ var Weather =
 function (_Element) {
   _inherits(Weather, _Element);
 
-  function Weather(_ref) {
-    var _this;
-
-    var restProps = _extends({}, _ref);
-
+  function Weather() {
     _classCallCheck(this, Weather);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Weather).call(this, restProps));
-    _this.renderWeatherContent = _this.renderWeatherContent.bind(_assertThisInitialized(_this));
-    _this.onStateUpdate = _this.onStateUpdate.bind(_assertThisInitialized(_this));
-    return _this;
-  } // eslint-disable-next-line class-methods-use-this
-
+    return _possibleConstructorReturn(this, _getPrototypeOf(Weather).apply(this, arguments));
+  }
 
   _createClass(Weather, [{
     key: "extractPropsFromState",
+    // constructor({ ...restProps }) {
+    //   super(restProps);
+    //   this.onStateUpdate = this.onStateUpdate.bind(this);
+    // }
     value: function extractPropsFromState(state) {
       return {
         isLoading: Object(_state_weather__WEBPACK_IMPORTED_MODULE_2__["getWeatherLoadingState"])(state),
@@ -14916,8 +14728,21 @@ function (_Element) {
       };
     }
   }, {
-    key: "renderWeatherContent",
-    value: function renderWeatherContent() {
+    key: "onStateUpdate",
+    value: function onStateUpdate() {
+      var icons = document.querySelectorAll('.icon');
+      icons.forEach(function (element) {
+        var skyConSelector = element.classList[2].split('-').join('_').toUpperCase();
+        var skyCon = new Skycons({
+          color: '#ffffff'
+        });
+        skyCon.add(element.id, Skycons[skyConSelector]);
+        skyCon.play();
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
       var _this$props = this.props,
           isLoading = _this$props.isLoading,
           dictionary = _this$props.dictionary,
@@ -14939,26 +14764,6 @@ function (_Element) {
       var noDataElement = Object(_utils_dom_createDomElement__WEBPACK_IMPORTED_MODULE_0__["default"])('span');
       noDataElement.innerText = dictionary['weather.noData'];
       return noDataElement;
-    } // eslint-disable-next-line class-methods-use-this
-
-  }, {
-    key: "onStateUpdate",
-    value: function onStateUpdate() {
-      var icons = document.querySelectorAll('.icon');
-      icons.forEach(function (element) {
-        var skyConSelector = element.classList[2].split('-').join('_').toUpperCase();
-        var skyCon = new Skycons({
-          color: '#ffffff'
-        });
-        skyCon.add(element.id, Skycons[skyConSelector]);
-        skyCon.play();
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var weather = this.renderWeatherContent();
-      return weather;
     }
   }]);
 
@@ -15455,39 +15260,21 @@ function getHoursMinutesString(value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return getSeasonOfTheYear; });
-function getSeasonOfTheYear(date) {
-  var season = '';
-  var month = date.getMonth(); // eslint-disable-next-line default-case
+var SEASONS = {
+  winter: [0, 1, 11],
+  spring: [2, 3, 4],
+  summer: [5, 6, 7],
+  autumn: [8, 9, 10]
+};
 
-  switch (month) {
-    case 11:
-    case 0:
-    case 1:
-      season = 'winter';
-      break;
+var getSeasonOfTheYear = function getSeasonOfTheYear(date) {
+  var month = date.getMonth();
+  return Object.keys(SEASONS).find(function (key) {
+    return SEASONS[key].includes(month);
+  });
+};
 
-    case 2:
-    case 3:
-    case 4:
-      season = 'spring';
-      break;
-
-    case 5:
-    case 6:
-    case 7:
-      season = 'summer';
-      break;
-
-    case 8:
-    case 9:
-    case 10:
-      season = 'autumn';
-      break;
-  }
-
-  return season;
-}
+/* harmony default export */ __webpack_exports__["default"] = (getSeasonOfTheYear);
 
 /***/ }),
 
@@ -15500,23 +15287,32 @@ function getSeasonOfTheYear(date) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return getTimeOfDay; });
-function getTimeOfDay(date) {
-  var dayTime = '';
-  var hour = date.getHours();
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
-  if (hour >= 0 && hour < 4) {
-    dayTime = 'night';
-  } else if (hour >= 4 && hour < 12) {
-    dayTime = 'morning';
-  } else if (hour >= 12 && hour < 17) {
-    dayTime = 'day';
-  } else {
-    dayTime = 'evening';
-  }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-  return dayTime;
-}
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var TIMES_OF_DAY = {
+  night: [0, 4],
+  morning: [4, 12],
+  day: [12, 17]
+};
+
+var getTimeOfDay = function getTimeOfDay(date) {
+  var hours = date.getHours();
+  return Object.keys(TIMES_OF_DAY).find(function (key) {
+    var _TIMES_OF_DAY$key = _slicedToArray(TIMES_OF_DAY[key], 2),
+        start = _TIMES_OF_DAY$key[0],
+        end = _TIMES_OF_DAY$key[1];
+
+    return hours >= start && hours < end;
+  }) || 'evening';
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (getTimeOfDay);
 
 /***/ }),
 
@@ -15554,16 +15350,18 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return fetchBackgroundImage; });
+/* harmony import */ var _api_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api-keys */ "./src/workspace/api-keys.js");
+
 function fetchBackgroundImage(geoData, currentWeather) {
-  var weatherDescription, weatherDescriptionTag, unsplashKey, searchUrl, responseData, urlString, backgroundElement;
+  var unsplash, weatherDescription, weatherDescriptionTag, searchUrl, responseData, urlString, backgroundElement;
   return regeneratorRuntime.async(function fetchBackgroundImage$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
+          unsplash = _api_keys__WEBPACK_IMPORTED_MODULE_0__["default"].unsplash;
           weatherDescription = currentWeather.currently ? currentWeather.currently.summary : 'nature';
           weatherDescriptionTag = weatherDescription.split(' ').join('%20');
-          unsplashKey = '609397bc40c62b170bf5c7f93189c2d2520a5b2b2b13dbb9a54522f2e2cff863';
-          searchUrl = "https://api.unsplash.com/photos/random?query=".concat(geoData.season, "+").concat(geoData.dayTime, "+").concat(weatherDescriptionTag, "&client_id=").concat(unsplashKey);
+          searchUrl = "https://api.unsplash.com/photos/random?query=".concat(geoData.season, "+").concat(geoData.dayTime, "+").concat(weatherDescriptionTag, "&client_id=").concat(unsplash);
           _context.next = 6;
           return regeneratorRuntime.awrap(fetch(searchUrl).then(function (response) {
             return response.json();
@@ -15616,35 +15414,37 @@ function getCoordsString(value) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return loadGeodata; });
 /* harmony import */ var _date__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date */ "./src/workspace/utils/date/index.js");
+/* harmony import */ var _api_keys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api-keys */ "./src/workspace/api-keys.js");
+
 
 function loadGeodata(city, lang) {
-  var cityToSearch, openCageKey, openCageLink, openCageResponce, _openCageResponce$res, geometry, annotations, components, lat, lng, timeZone, offsetMilliseconds, curDate, season, dayTime, cityName, cityNameFull, geoData;
+  var ipInfoToken, openCage, cityToSearch, openCageLink, openCageResponce, _openCageResponce$res, geometry, annotations, components, lat, lng, timeZone, offsetMilliseconds, curDate, season, dayTime, cityName, cityNameFull, geoData;
 
   return regeneratorRuntime.async(function loadGeodata$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
+          ipInfoToken = _api_keys__WEBPACK_IMPORTED_MODULE_1__["default"].ipInfoToken, openCage = _api_keys__WEBPACK_IMPORTED_MODULE_1__["default"].openCage;
           cityToSearch = city;
 
           if (!(cityToSearch === '')) {
-            _context.next = 5;
+            _context.next = 6;
             break;
           }
 
-          _context.next = 4;
-          return regeneratorRuntime.awrap(fetch('https://ipinfo.io/?token=e2e4b4e2801150').then(function (response) {
+          _context.next = 5;
+          return regeneratorRuntime.awrap(fetch("https://ipinfo.io/?token=".concat(ipInfoToken)).then(function (response) {
             return response.json();
           }));
 
-        case 4:
+        case 5:
           cityToSearch = _context.sent.city;
 
-        case 5:
-          openCageKey = '86cce384ed6d4ce5aced179edbac285c';
-          openCageLink = "https://api.opencagedata.com/geocode/v1/json?q=".concat(cityToSearch, "&key=").concat(openCageKey, "&limit=1&language=").concat(lang.toLowerCase());
+        case 6:
+          openCageLink = "https://api.opencagedata.com/geocode/v1/json?q=".concat(cityToSearch, "&key=").concat(openCage, "&limit=1&language=").concat(lang.toLowerCase());
           _context.next = 9;
           return regeneratorRuntime.awrap(fetch(openCageLink).then(function (response) {
-            return response.json();
+            return response.ok ? response.json() : Promise.reject(response);
           }));
 
         case 9:
@@ -15670,9 +15470,7 @@ function loadGeodata(city, lang) {
             dayTime: dayTime,
             curDate: curDate
           };
-          return _context.abrupt("return", new Promise(function (resolve) {
-            return resolve(geoData);
-          }));
+          return _context.abrupt("return", geoData);
 
         case 22:
         case "end":
@@ -15694,14 +15492,16 @@ function loadGeodata(city, lang) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return loadWeather; });
+/* harmony import */ var _api_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api-keys */ "./src/workspace/api-keys.js");
+
 function loadWeather(geoData, lang, tempScale) {
-  var darkSkyKey, requestLink, responseData;
+  var darkSky, requestLink, responseData;
   return regeneratorRuntime.async(function loadWeather$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          darkSkyKey = '96e5e8ae067b19d2224fbc31e1ad0ba6';
-          requestLink = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/".concat(darkSkyKey, "/").concat(geoData.lat, ",").concat(geoData.lng, "?exclude=hourly&units=").concat(tempScale.code, "&lang=").concat(lang);
+          darkSky = _api_keys__WEBPACK_IMPORTED_MODULE_0__["default"].darkSky;
+          requestLink = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/".concat(darkSky, "/").concat(geoData.lat, ",").concat(geoData.lng, "?exclude=hourly&units=").concat(tempScale.code, "&lang=").concat(lang);
           _context.t0 = regeneratorRuntime;
           _context.next = 5;
           return regeneratorRuntime.awrap(fetch(requestLink));
@@ -15713,9 +15513,7 @@ function loadWeather(geoData, lang, tempScale) {
 
         case 8:
           responseData = _context.sent;
-          return _context.abrupt("return", new Promise(function (resolve) {
-            return resolve(responseData);
-          }));
+          return _context.abrupt("return", responseData);
 
         case 10:
         case "end":
