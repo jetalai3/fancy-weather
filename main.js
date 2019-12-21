@@ -14254,6 +14254,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_models_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../common/models/element */ "./src/common/models/element/index.js");
 /* harmony import */ var _state_languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../state/languages */ "./src/workspace/state/languages.js");
 /* harmony import */ var _state_geodata__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../state/geodata */ "./src/workspace/state/geodata.js");
+/* harmony import */ var _utils_checkIfCityExists__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/checkIfCityExists */ "./src/workspace/utils/checkIfCityExists.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -14279,6 +14280,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -14313,16 +14315,20 @@ function (_Element) {
   }, {
     key: "onSearchBarSubmit",
     value: function onSearchBarSubmit(e) {
-      var currentGeoDataObject = this.props.currentGeoDataObject;
+      var _this2 = this;
+
+      var _this$props = this.props,
+          currentGeoDataObject = _this$props.currentGeoDataObject,
+          activeDictionary = _this$props.activeDictionary;
 
       var geoDataCopy = _objectSpread({}, currentGeoDataObject);
 
       geoDataCopy.cityName = e.target[0].value;
-
-      if (geoDataCopy.cityName) {
-        this.updateState(Object(_state_geodata__WEBPACK_IMPORTED_MODULE_3__["setGeoDataObject"])(geoDataCopy));
-      }
-
+      Object(_utils_checkIfCityExists__WEBPACK_IMPORTED_MODULE_4__["default"])(geoDataCopy.cityName, activeDictionary['locale.name']).then(function (result) {
+        if (result === true) {
+          _this2.updateState(Object(_state_geodata__WEBPACK_IMPORTED_MODULE_3__["setGeoDataObject"])(geoDataCopy));
+        }
+      });
       e.preventDefault();
     }
   }, {
@@ -14376,6 +14382,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_models_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../common/models/element */ "./src/common/models/element/index.js");
 /* harmony import */ var _state_languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../state/languages */ "./src/workspace/state/languages.js");
 /* harmony import */ var _state_geodata__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../state/geodata */ "./src/workspace/state/geodata.js");
+/* harmony import */ var _utils_checkIfCityExists__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/checkIfCityExists */ "./src/workspace/utils/checkIfCityExists.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -14410,6 +14417,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var SpeechRecognitionButton =
 /*#__PURE__*/
 function (_Element) {
@@ -14425,6 +14433,7 @@ function (_Element) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SpeechRecognitionButton).call(this, restProps));
     _this.recognition = new webkitSpeechRecognition();
     _this.speechRecognitionList = new webkitSpeechGrammarList();
+    _this.recognizing = false;
     _this.handleRecognition = _this.handleRecognition.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -14448,24 +14457,33 @@ function (_Element) {
       this.recognition.lang = 'en-US';
       this.recognition.interimResults = false;
       this.recognition.maxAlternatives = 1;
-      var currentGeoDataObject = this.props.currentGeoDataObject;
+      var _this$props = this.props,
+          currentGeoDataObject = _this$props.currentGeoDataObject,
+          activeDictionary = _this$props.activeDictionary;
 
       var geoDataCopy = _objectSpread({}, currentGeoDataObject);
 
       this.recognition.onresult = function (e) {
         var last = e.results.length - 1;
         geoDataCopy.cityName = e.results[last][0].transcript;
-
-        if (geoDataCopy.cityName) {
-          _this2.updateState(Object(_state_geodata__WEBPACK_IMPORTED_MODULE_3__["setGeoDataObject"])(geoDataCopy));
-        }
+        Object(_utils_checkIfCityExists__WEBPACK_IMPORTED_MODULE_4__["default"])(geoDataCopy.cityName, activeDictionary['locale.name']).then(function (result) {
+          if (result === true) {
+            _this2.updateState(Object(_state_geodata__WEBPACK_IMPORTED_MODULE_3__["setGeoDataObject"])(geoDataCopy));
+          }
+        });
       };
 
       this.recognition.onspeechend = function () {
         _this2.recognition.stop();
+
+        _this2.recognizing = false;
       };
 
-      this.recognition.start();
+      this.recognition.onstart = function () {
+        _this2.recognizing = true;
+      };
+
+      if (this.recognizing === false) this.recognition.start();
     }
   }, {
     key: "render",
@@ -14714,10 +14732,6 @@ function (_Element) {
 
   _createClass(Weather, [{
     key: "extractPropsFromState",
-    // constructor({ ...restProps }) {
-    //   super(restProps);
-    //   this.onStateUpdate = this.onStateUpdate.bind(this);
-    // }
     value: function extractPropsFromState(state) {
       return {
         isLoading: Object(_state_weather__WEBPACK_IMPORTED_MODULE_2__["getWeatherLoadingState"])(state),
@@ -14919,8 +14933,7 @@ function (_UpdateListener) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(GeoDataLoader).call(this, restProps));
     _this.loadGeoData = loadGeoData;
     return _this;
-  } // eslint-disable-next-line class-methods-use-this
-
+  }
 
   _createClass(GeoDataLoader, [{
     key: "extractPropsFromState",
@@ -15234,6 +15247,77 @@ var setWeatherObject = function setWeatherObject(weatherObject) {
 
 /***/ }),
 
+/***/ "./src/workspace/utils/checkIfCityExists.js":
+/*!**************************************************!*\
+  !*** ./src/workspace/utils/checkIfCityExists.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _api_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../api-keys */ "./src/workspace/api-keys.js");
+ // eslint-disable-next-line consistent-return
+
+var checkIfCityExists = function checkIfCityExists(textToSearch, lang) {
+  var openCage, openCageLink, openCageResponse, data;
+  return regeneratorRuntime.async(function checkIfCityExists$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          openCage = _api_keys__WEBPACK_IMPORTED_MODULE_0__["default"].openCage;
+          openCageLink = "https://api.opencagedata.com/geocode/v1/json?q=".concat(textToSearch, "&key=").concat(openCage, "&limit=1&language=").concat(lang.toLowerCase());
+          _context.prev = 2;
+          _context.next = 5;
+          return regeneratorRuntime.awrap(fetch(openCageLink));
+
+        case 5:
+          openCageResponse = _context.sent;
+
+          if (!openCageResponse.ok) {
+            _context.next = 14;
+            break;
+          }
+
+          _context.next = 9;
+          return regeneratorRuntime.awrap(openCageResponse.json());
+
+        case 9:
+          data = _context.sent;
+
+          if (!(!data || data.total_results === 0)) {
+            _context.next = 13;
+            break;
+          }
+
+          // eslint-disable-next-line no-alert
+          alert('Bad city request');
+          return _context.abrupt("return", false);
+
+        case 13:
+          return _context.abrupt("return", true);
+
+        case 14:
+          _context.next = 19;
+          break;
+
+        case 16:
+          _context.prev = 16;
+          _context.t0 = _context["catch"](2);
+          throw new Error(_context.t0);
+
+        case 19:
+        case "end":
+          return _context.stop();
+      }
+    }
+  }, null, null, [[2, 16]]);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (checkIfCityExists);
+
+/***/ }),
+
 /***/ "./src/workspace/utils/date/getHoursMinutesString.js":
 /*!***********************************************************!*\
   !*** ./src/workspace/utils/date/getHoursMinutesString.js ***!
@@ -15417,43 +15501,66 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _api_keys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api-keys */ "./src/workspace/api-keys.js");
 
 
-function loadGeodata(city, lang) {
-  var ipInfoToken, openCage, cityToSearch, openCageLink, openCageResponce, _openCageResponce$res, geometry, annotations, components, lat, lng, timeZone, offsetMilliseconds, curDate, season, dayTime, cityName, cityNameFull, geoData;
 
-  return regeneratorRuntime.async(function loadGeodata$(_context) {
+var fetchLocalCityName = function fetchLocalCityName() {
+  var ipInfoToken, localCityName;
+  return regeneratorRuntime.async(function fetchLocalCityName$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          ipInfoToken = _api_keys__WEBPACK_IMPORTED_MODULE_1__["default"].ipInfoToken, openCage = _api_keys__WEBPACK_IMPORTED_MODULE_1__["default"].openCage;
-          cityToSearch = city;
-
-          if (!(cityToSearch === '')) {
-            _context.next = 6;
-            break;
-          }
-
-          _context.next = 5;
+          ipInfoToken = _api_keys__WEBPACK_IMPORTED_MODULE_1__["default"].ipInfoToken;
+          _context.next = 3;
           return regeneratorRuntime.awrap(fetch("https://ipinfo.io/?token=".concat(ipInfoToken)).then(function (response) {
             return response.json();
           }));
 
+        case 3:
+          localCityName = _context.sent.city;
+          return _context.abrupt("return", localCityName);
+
         case 5:
-          cityToSearch = _context.sent.city;
+        case "end":
+          return _context.stop();
+      }
+    }
+  });
+};
+
+function loadGeodata(city, lang) {
+  var openCage, cityToSearch, openCageLink, openCageResponse, _openCageResponse$res, geometry, annotations, components, lat, lng, timeZone, offsetMilliseconds, curDate, season, dayTime, cityName, cityNameFull, geoData;
+
+  return regeneratorRuntime.async(function loadGeodata$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          openCage = _api_keys__WEBPACK_IMPORTED_MODULE_1__["default"].openCage;
+          cityToSearch = city;
+
+          if (!(cityToSearch === '')) {
+            _context2.next = 6;
+            break;
+          }
+
+          _context2.next = 5;
+          return regeneratorRuntime.awrap(fetchLocalCityName());
+
+        case 5:
+          cityToSearch = _context2.sent;
 
         case 6:
           openCageLink = "https://api.opencagedata.com/geocode/v1/json?q=".concat(cityToSearch, "&key=").concat(openCage, "&limit=1&language=").concat(lang.toLowerCase());
-          _context.next = 9;
+          _context2.next = 9;
           return regeneratorRuntime.awrap(fetch(openCageLink).then(function (response) {
-            return response.ok ? response.json() : Promise.reject(response);
+            return response.json();
           }));
 
         case 9:
-          openCageResponce = _context.sent;
-          _openCageResponce$res = openCageResponce.results[0], geometry = _openCageResponce$res.geometry, annotations = _openCageResponce$res.annotations, components = _openCageResponce$res.components;
+          openCageResponse = _context2.sent;
+          _openCageResponse$res = openCageResponse.results[0], geometry = _openCageResponse$res.geometry, annotations = _openCageResponse$res.annotations, components = _openCageResponse$res.components;
           lat = geometry.lat, lng = geometry.lng;
           timeZone = annotations.timezone.name;
           offsetMilliseconds = annotations.timezone.offset_sec * 1000;
-          curDate = new Date(Date.parse(openCageResponce.timestamp.created_http) + offsetMilliseconds);
+          curDate = new Date(Date.parse(openCageResponse.timestamp.created_http) + offsetMilliseconds);
           season = Object(_date__WEBPACK_IMPORTED_MODULE_0__["getSeasonOfTheYear"])(curDate);
           dayTime = Object(_date__WEBPACK_IMPORTED_MODULE_0__["getTimeOfDay"])(curDate); // eslint-disable-next-line no-underscore-dangle
 
@@ -15470,11 +15577,11 @@ function loadGeodata(city, lang) {
             dayTime: dayTime,
             curDate: curDate
           };
-          return _context.abrupt("return", geoData);
+          return _context2.abrupt("return", geoData);
 
         case 22:
         case "end":
-          return _context.stop();
+          return _context2.stop();
       }
     }
   });
